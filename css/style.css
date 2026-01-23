@@ -300,14 +300,22 @@ body {
 }
 
 @media (max-width: 600px) {
-  /* Fix invisible gradients on mobile */
+  /* Fix invisible gradients on mobile: Smoother Blend */
   #background-layer {
-     opacity: 1 !important; /* Force full visibility */
-     filter: blur(50px); /* Reduce blur load for weak mobile GPUs */
+    opacity: 0.8 !important; /* Slightly reduced for less harshness */
+    filter: blur(80px) !important; /* Restore high blur for creamy blend */
   }
-  
+
   .gradient-sphere {
-     opacity: 0.6 !important; /* Boost individual sphere visibility */
+    opacity: 0.5 !important;
+  }
+
+  /* Make spheres massive on mobile to force blending */
+  .one,
+  .two,
+  .three {
+    width: 100vw !important;
+    height: 100vw !important;
   }
 
   #intro {

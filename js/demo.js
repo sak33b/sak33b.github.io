@@ -11,15 +11,18 @@ const initApp = () => {
     const tl = gsap.timeline({ 
         defaults: { ease: "power3.out" },
         onComplete: () => {
-             // Init Tilt only AFTER entrance animation prevents "Jitter" conflict
-            VanillaTilt.init(document.querySelector("#intro"), {
-                max: 5,
-                speed: 1000,
-                perspective: 1200,
-                glare: true,
-                "max-glare": 0.15,
-                scale: 1.02
-            });
+            // Only init Tilt on non-touch devices to avoid Mobile rendering bugs
+            const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            if (!isTouch) {
+                VanillaTilt.init(document.querySelector("#intro"), {
+                    max: 5,
+                    speed: 1000,
+                    perspective: 1200,
+                    glare: true,
+                    "max-glare": 0.15,
+                    scale: 1.02
+                });
+            }
         }
     });
 
