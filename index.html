@@ -1,64 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
+  <head>
+    <base target="_blank" />
+    <meta charset="UTF-8" />
+    <title>Sakeeb</title>
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
 
-<head>
-  <base target="_blank" />
-  <meta charset="UTF-8" />
-  <title>Sakeeb</title>
-  <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
+    <!-- jQuery is completely optional -->
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.particleground.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ff622b303d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Force layout calculation before particles load
+      document.addEventListener("DOMContentLoaded", function () {
+        const particles = document.getElementById("particles");
+        if (particles) {
+          // Force layout recalculation
+          void particles.offsetWidth;
+        }
+      });
+    </script>
+  </head>
 
-  <!-- jQuery is completely optional -->
-  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery.particleground.js"></script>
-  <script type="text/javascript" src="js/demo.js"></script>
-  <script src="https://kit.fontawesome.com/ff622b303d.js" crossorigin="anonymous"></script>
-  <script>
-    // Force layout calculation before particles load
-    document.addEventListener('DOMContentLoaded', function() {
-      const particles = document.getElementById('particles');
-      if (particles) {
-        // Force layout recalculation
-        void particles.offsetWidth;
-      }
-    });
-  </script>
-</head>
-
-<body>
-  <div id="preloader">
-    <div class="loader">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-  </div>
-
-  <div id="particles">
-    <div id="intro">
-      <h2>
-        Shadman Sakeeb
-        <a href="resume.pdf" class="resume-link" title="Download Resume">
-          <img src="assets/resume.png" height="35" width="35" alt="Resume" class="resume-icon" />
-        </a>
-      </h2>
-
-      <p>
-        Sophomore at
-        <a href="https://www.bracu.ac.bd/" class="bracu-link">BracU</a>
-      </p>
-      <p>Computer Science and Engineering</p>
-
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/sakeeb129/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/sakeeb129" title="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://github.com/sak33b" title="GitHub"><i class="fa-brands fa-square-github"></i></a>
-        <a href="https://twitter.com/sakeeb129" title="Twitter"><i class="fa-brands fa-square-x-twitter"></i></a>
-        <a href="mailto:sakeeb291@gmail.com" title="Email"><i class="fa-solid fa-square-envelope"></i></a>
+  <body>
+    <div id="preloader">
+      <div class="loader">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
     </div>
-  </div>
-</body>
 
+    <div id="particles">
+      <div id="intro">
+        <h2>
+          Shadman Sakeeb
+          <a href="resume.pdf" class="resume-link" title="Download Resume">
+            <img
+              src="assets/resume.png"
+              height="35"
+              width="35"
+              alt="Resume"
+              class="resume-icon"
+            />
+          </a>
+        </h2>
+
+        <p>
+          Junior CS @<a href="https://www.bracu.ac.bd/" class="bracu-link"
+            >BracU</a
+          >
+        </p>
+        <!-- <p>Computer Science</p> -->
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/sakeeb129/" title="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.facebook.com/sakeeb129" title="Facebook"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="https://github.com/sak33b" title="GitHub"
+            ><i class="fa-brands fa-square-github"></i
+          ></a>
+          <a href="https://twitter.com/sakeeb129" title="Twitter"
+            ><i class="fa-brands fa-square-x-twitter"></i
+          ></a>
+          <a href="mailto:sakeeb291@gmail.com" title="Email"
+            ><i class="fa-solid fa-square-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
