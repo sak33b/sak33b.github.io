@@ -1,82 +1,120 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
   <head>
-    <base target="_blank" />
     <meta charset="UTF-8" />
-    <title>Sakeeb</title>
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <title>Sakeeb | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Shadman Sakeeb - Computer Science Student"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- jQuery is completely optional -->
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.particleground.js"></script>
-    <script type="text/javascript" src="js/demo.js"></script>
-    <script
-      src="https://kit.fontawesome.com/ff622b303d.js"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      // Force layout calculation before particles load
-      document.addEventListener("DOMContentLoaded", function () {
-        const particles = document.getElementById("particles");
-        if (particles) {
-          // Force layout recalculation
-          void particles.offsetWidth;
-        }
-      });
-    </script>
+    <script src="https://kit.fontawesome.com/ff622b303d.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" defer></script>
+    <script src="js/demo.js" defer></script>
   </head>
-
   <body>
     <div id="preloader">
-      <div class="loader">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+      <div class="loader-content">
+        <div class="spinner"></div>
+        <div class="loading-text">INITIALIZING</div>
       </div>
     </div>
-
-    <div id="particles">
-      <div id="intro">
-        <h2>
-          Shadman Sakeeb
-          <a href="resume.pdf" class="resume-link" title="Download Resume">
-            <img
-              src="assets/resume.png"
-              height="35"
-              width="35"
-              alt="Resume"
-              class="resume-icon"
-            />
-          </a>
-        </h2>
-
-        <p>
-          Junior CS @<a href="https://www.bracu.ac.bd/" class="bracu-link"
-            >BracU</a
-          >
-        </p>
-        <!-- <p>Computer Science</p> -->
-
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/sakeeb129/" title="LinkedIn"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://www.facebook.com/sakeeb129" title="Facebook"
-            ><i class="fa-brands fa-square-facebook"></i
-          ></a>
-          <a href="https://github.com/sak33b" title="GitHub"
-            ><i class="fa-brands fa-square-github"></i
-          ></a>
-          <a href="https://twitter.com/sakeeb129" title="Twitter"
-            ><i class="fa-brands fa-square-x-twitter"></i
-          ></a>
-          <a href="mailto:sakeeb291@gmail.com" title="Email"
-            ><i class="fa-solid fa-square-envelope"></i
-          ></a>
+    <div id="background-layer">
+      <div class="gradient-sphere one"></div>
+      <div class="gradient-sphere two"></div>
+      <div class="gradient-sphere three"></div>
+    </div>
+    <div id="particles"></div>
+    <div id="intro-wrapper">
+      <main
+        id="intro"
+        data-tilt
+        data-tilt-max="5"
+        data-tilt-speed="1000"
+        data-tilt-perspective="1200"
+        data-tilt-glare
+        data-tilt-max-glare="0.15"
+        data-tilt-scale="1.02"
+      >
+        <div class="glass-sheen"></div>
+        <div class="content-inner">
+          <h1 class="name-title">
+            Shadman Sakeeb
+            <a
+              href="resume.pdf"
+              class="resume-badge"
+              title="View Resume"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="status-dot"></span>
+              CV
+            </a>
+          </h1>
+          <div class="role-container">
+            <span class="role-text">CS Undergrad</span>
+            <span class="separator">@</span>
+            <a
+              href="https://www.bracu.ac.bd/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="org-link"
+              >BracU</a
+            >
+          </div>
+          <div class="social-dock">
+            <a
+              href="https://www.linkedin.com/in/sakeeb129/"
+              target="_blank"
+              class="dock-item"
+              title="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/sak33b"
+              target="_blank"
+              class="dock-item"
+              title="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://twitter.com/sakeeb129"
+              target="_blank"
+              class="dock-item"
+              title="Twitter"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/sakeeb129"
+              target="_blank"
+              class="dock-item"
+              title="Facebook"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="mailto:sakeeb291@gmail.com"
+              target="_blank"
+              class="dock-item"
+              title="Email"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   </body>
 </html>
