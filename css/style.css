@@ -300,6 +300,16 @@ body {
 }
 
 @media (max-width: 600px) {
+  /* Fix invisible gradients on mobile */
+  #background-layer {
+     opacity: 1 !important; /* Force full visibility */
+     filter: blur(50px); /* Reduce blur load for weak mobile GPUs */
+  }
+  
+  .gradient-sphere {
+     opacity: 0.6 !important; /* Boost individual sphere visibility */
+  }
+
   #intro {
     padding: 2rem 1.5rem;
     width: 95%;
@@ -322,11 +332,20 @@ body {
   .social-dock {
     padding: 8px 12px;
     gap: 6px;
+    /* Mobile Fix: Ensure visibility on some Android rendering engines */
+    transform: translateZ(0);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /* Fallback for browsers failing glass effect */
+    background: rgba(40, 40, 40, 0.4);
   }
 
   .dock-item {
     width: 34px;
     height: 34px;
     font-size: 1.1rem;
+    /* Touch target size fix */
+    min-width: 34px;
+    min-height: 34px;
   }
 }

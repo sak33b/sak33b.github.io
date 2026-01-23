@@ -8,7 +8,20 @@ const initApp = () => {
         initParticles(particlesContainer);
     }
 
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    const tl = gsap.timeline({ 
+        defaults: { ease: "power3.out" },
+        onComplete: () => {
+             // Init Tilt only AFTER entrance animation prevents "Jitter" conflict
+            VanillaTilt.init(document.querySelector("#intro"), {
+                max: 5,
+                speed: 1000,
+                perspective: 1200,
+                glare: true,
+                "max-glare": 0.15,
+                scale: 1.02
+            });
+        }
+    });
 
     tl.to("#preloader", {
         opacity: 0,
@@ -81,10 +94,17 @@ function initParticles(container) {
     
     let width, height;
     function resize() {
+        // High-DPI Display Support (Fixes blurry particles on mobile)
+        const dpr = window.devicePixelRatio || 1;
         width = container.offsetWidth;
         height = container.offsetHeight;
-        canvas.width = width;
-        canvas.height = height;
+        
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+        
+        ctx.scale(dpr, dpr); 
     }
     window.addEventListener('resize', resize);
     resize();
