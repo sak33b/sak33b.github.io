@@ -328,13 +328,16 @@ body {
   }
 
   .role-container {
-    font-size: 0.95rem;
-    flex-direction: column;
-    gap: 2px;
+    font-size: 0.9rem;
+    flex-direction: row;
+    gap: 6px;
+    justify-content: center;
+    white-space: nowrap;
   }
 
   .separator {
-    display: none;
+    display: inline-block;
+    opacity: 0.6;
   }
 
   .social-dock {
