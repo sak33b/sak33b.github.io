@@ -321,6 +321,19 @@ body {
   #intro {
     padding: 2rem 1.5rem;
     width: 95%;
+    /* Mobile Glass Fix: Stronger contrast against bright background */
+    background: rgba(30, 30, 30, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+      0 10px 40px -10px rgba(0, 0, 0, 0.8),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .resume-badge {
+    /* Mobile Fix: Increase visibility */
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 6px 14px; /* Larger touch target */
   }
 
   .name-title {
